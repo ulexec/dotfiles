@@ -16,6 +16,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'shirk/vim-gas'
+Plugin 'szw/vim-tags'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -31,6 +33,9 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+"associate *.asm with asm filetype
+au BufRead,BufNewFile *.asm set ft=fasm
 syntax enable
 colorscheme molokai
 let g:airline#extensions#tabline#enabled = 1
